@@ -67,7 +67,7 @@ public class ImageCipher
                     // if 8 bits have been processed, add the current character to the result text
                     if (colorUnitIndex % 8 == 0)
                     {
-                        // reverse? of course, since each time the process happens on the right (for simplicity)
+                        // reverse, since each time the process happens on the right 
                         charValue = ReverseBits(charValue);
 
                         // can only be 0 if it is the stop character (the 8 zeros)
