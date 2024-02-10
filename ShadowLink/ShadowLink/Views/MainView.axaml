@@ -3,50 +3,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:ShadowLink.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="800"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
              x:Class="ShadowLink.Views.MainView"
              x:DataType="vm:MainViewModel">
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainViewModel />
-    </Design.DataContext>
-    <Panel>
-        <ExperimentalAcrylicBorder IsHitTestVisible="False">
-            <ExperimentalAcrylicBorder.Material>
-                <ExperimentalAcrylicMaterial
-                    BackgroundSource="Digger"
-                    TintColor="Black"
-                    TintOpacity="1"
-                    MaterialOpacity="0.65" />
-            </ExperimentalAcrylicBorder.Material>
-        </ExperimentalAcrylicBorder>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Border BorderBrush="Black" BorderThickness="2" Margin="10">
-                <Image x:Name="ImgPreview" Height="500" Width="350" Margin="10,0,10,0" />
-            </Border>
-
-            <Button x:Name="BtnUploadImage" Content="Upload Image" Command="{Binding UploadImageCommand}"
-                    Margin="320,0,0,0" />
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
-                        Margin="0,70 0 0">
-                <TextBox x:Name="TxtEmbedMessage" Height="50" TextWrapping="Wrap"
-                         Text="{Binding UserInputEmbedText}" Width="200" Margin="10" />
-
-                <TextBox x:Name="TxtExtractMessage" Height="50" TextWrapping="Wrap" Text="" Width="200"
-                         IsReadOnly="True" Margin="10" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="BtnEmbedMessage" Command="{Binding EmbedMessageCommand}"
-                        Width="200" Margin="0,0,20,0">
-                    <TextBlock Text="Embed Message" TextAlignment="Center" />
-                </Button>
-
-                <Button x:Name="BtnExtractMessage" Command="{Binding ExtractMessageCommand}"
-                        Width="200" Margin="0,0,0,0">
-                    <TextBlock Text="Extract Message" TextAlignment="Center" />
-                </Button>
-            </StackPanel>
-        </StackPanel>
-    </Panel>
+    <vm:MainViewModel />
+  </Design.DataContext>
 </UserControl>
